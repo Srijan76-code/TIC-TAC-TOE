@@ -5,7 +5,7 @@ let player1=document.querySelector(".p1");
 let p2=document.querySelector("#p2");
 let player2=document.querySelector(".p2");
 let boxX=true;
-
+let count=-1;
 
 let wp=[[0,1,2], [3,4,5],[6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
 
@@ -34,6 +34,7 @@ function winnerP() {
 boxes.forEach(
     (box)=>{
         box.addEventListener("click",()=>{
+            count+=1;
             if (boxX){
                 box.innerHTML="X"; 
                 boxX=false;
@@ -44,8 +45,10 @@ boxes.forEach(
 
             }
             box.style.pointerEvents="none";
+    
             
-            if (winnerP()){
+            if ((winnerP()) || (count==8 && winnerP()!==true)){
+                count=-1;
                 boxes.forEach(
                     (box)=>{
                         box.innerHTML=""; 
