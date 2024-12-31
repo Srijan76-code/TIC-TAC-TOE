@@ -1,60 +1,63 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Gilda+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rye&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #545677;
     color: white;
-    max-width:100%;
+    max-width: 100%;
     overflow-x: hidden;
     font-family: "Poppins", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 
 }
-.header{
+
+.header {
 
     text-align: center;
-    font-size: 5rem ;
+    font-size: 5rem;
     color: black;
     font-weight: bold;
     /* border-bottom: 4px solid black; */
-    box-shadow: 0 20px 40px black ;
+    box-shadow: 0 20px 40px black;
     background-color: #565886;
 
 }
-.main{
+
+.main {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
-.container{
 
-    display: grid;  
+.container {
+
+    display: grid;
     width: 480px;
-    height: 480px; 
-    grid-template-columns: repeat(3,150px);
-    grid-template-rows: repeat(3,150px);
+    height: 480px;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
     align-items: center;
-    margin:50px auto;
+    margin: 50px auto;
     border: 5px solid black;
     background-color: #4f5172;
-    box-shadow: 20px 20px 40px black ;
+    box-shadow: 20px 20px 40px black;
     border-radius: 30px;
 
     gap: 16px;
     padding: 20px;
-  
+
 
 }
-.box{
+
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,16 +72,26 @@ body{
     cursor: pointer;
 
 }
-.players{
+
+.info {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.players {
     width: 600px;
     display: flex;
-    margin: 40px auto;
+    /* margin: 40px auto; */
     justify-content: space-around;
     align-items: center;
     font-size: 2rem;
-    
+
 }
-.player{
+
+.player {
     text-align: center;
     padding: 10px 28px;
     background-color: #011C27;
@@ -86,35 +99,58 @@ body{
 
     border-radius: 15px;
     color: #dfdcdc;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 2rem;
-    
+
 }
-.reset{
+
+.reset {
 
     width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
- 
-  
 }
-.btn{
+
+.btn {
     text-align: center;
     padding: 8px 30px;
-
-    background-color: #011C27;
-    box-shadow: 0px 4px 12px #011C27;
-
+    background-color: #000000;
+    box-shadow: 0px 4px 12px #181818;
     border-radius: 15px;
     color: #dfdcdc;
+    font-weight: 500;
+    font-size: 2rem;
+
+}
+
+.clicked {
+    box-shadow: 6px 6px 6px rgb(0, 0, 0) inset;
+    background-color: #303030;
+
+}
+
+.msg {
+
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+    display: none;
+}
+
+#message {
+    text-align: center;
+    padding: 8px 30px;
+    background-color: #faedcd;
+    color: black;
+    box-shadow: 0px 4px 12px #181818;
+    border-radius: 15px;
+    /* color: #dfdcdc; */
     font-weight: bold;
     font-size: 2rem;
-    
-}
-.clicked{
-    box-shadow: 4px 4px 4px rgb(0, 0, 0) inset;
-    background-color: #011C27;
 
 }
