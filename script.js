@@ -82,6 +82,8 @@ reset_btn.addEventListener("click",()=>{
     }, 200);
     p1.innerHTML=0;
     p2.innerHTML=0;
+    msg.style.display="none";
+    
     
     boxes.forEach(
         (box)=>{
