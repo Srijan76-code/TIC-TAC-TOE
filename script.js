@@ -9,11 +9,14 @@ let msg=document.querySelector(".msg");
 let boxX=true;
 let count=-1;
 
+let tap_sound=new Audio("./tap-notification-180637.mp3");
+let victory_sound=new Audio("./victorymale-version-230553.mp3");
+let gameover_sound=new Audio("./game-over-female-gfx-sounds-1-00-01.mp3")
 let wp=[[0,1,2], [3,4,5],[6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
-
 function winnerP() {
     for (win of wp){
         if (boxes[win[0]].innerHTML==="X" && boxes[win[1]].innerHTML==="X" && boxes[win[2]].innerHTML==="X"){
+            victory_sound.play();
             message.innerHTML=`Congratulations, You : WON`;
             msg.style.display="flex";
             player1.style.border="2px solid white";
@@ -24,7 +27,8 @@ function winnerP() {
 
         }
         if (boxes[win[0]].innerHTML==="O" && boxes[win[1]].innerHTML==="O" && boxes[win[2]].innerHTML==="O"){
-            message.innerHTML=`Congratulations, P2 : WON`;
+            gameover_sound.play();
+            message.innerHTML=`Oops, You : Loose`;
             msg.style.display="flex";
 
 
@@ -43,6 +47,7 @@ function winnerP() {
 boxes.forEach(
     (box)=>{
         box.addEventListener("click",()=>{
+            tap_sound.play();
             count+=1;
             if (boxX){
                 box.innerHTML="X"; 
@@ -76,6 +81,7 @@ boxes.forEach(
 )
 
 reset_btn.addEventListener("click",()=>{
+    tap_sound.play();
     document.querySelector(".btn").classList.add('clicked');
     setTimeout(() => {
         document.querySelector(".btn").classList.remove('clicked');
